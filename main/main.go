@@ -17,10 +17,12 @@ func main() {
 		{1, "Hello, World!"},
 		{2, "Basic Numbers"},
 		{3, "Boolean"},
-		{4, "Exit"},
+		{4, "Convert Data Type"},
+		{5, "Type Declaration"},
+		{6, "Exit"},
 	}
 
-	for true {
+	for {
 		printMenu(&menuList)
 
 		fmt.Printf("Select Option: ")
@@ -36,9 +38,15 @@ func main() {
 		case 3:
 			printBoolean()
 			fmt.Println()
+		case 4:
+			printConvertDataType()
+			fmt.Println()
+		case 5:
+			printTypeDeclaration()
+			fmt.Println()
 		}
 
-		if option == 4 {
+		if option == len(menuList) {
 			break
 		}
 	}
