@@ -1,11 +1,11 @@
-package main
+package service
 
 import (
 	"fmt"
 )
 
-func printBoolean() {
-	true_var  := true
+func PrintBoolean() {
+	true_var := true
 	false_var := false
 
 	fmt.Println(true_var)

@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"idx/service"
 )
 
 type MenuItem struct {
@@ -19,7 +20,8 @@ func main() {
 		{3, "Boolean"},
 		{4, "Convert Data Type"},
 		{5, "Type Declaration"},
-		{6, "Exit"},
+		{6, "Print Addition"},
+		{7, "Exit"},
 	}
 
 	for {
@@ -30,19 +32,27 @@ func main() {
 
 		switch option {
 		case 1:
-			printHelloWorld()
+			// ! Hello World
+			service.PrintHelloWorld()
 			fmt.Println()
 		case 2:
-			printBasicNumbers()
+			// ! Basic Numbers
+			service.PrintBasicNumbers()
 			fmt.Println()
 		case 3:
-			printBoolean()
+			// ! Boolean
+			service.PrintBoolean()
 			fmt.Println()
 		case 4:
-			printConvertDataType()
+			// ! Convert Data Type
+			service.PrintConvertDataType()
 			fmt.Println()
 		case 5:
-			printTypeDeclaration()
+			// ! Type Declaration
+			service.PrintTypeDeclaration()
+			fmt.Println()
+		case 6:
+			service.PrintOperation()
 			fmt.Println()
 		}
 

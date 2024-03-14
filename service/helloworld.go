@@ -1,9 +1,9 @@
-package main
+package service
 
 import (
 	"fmt"
 )
 
-func printHelloWorld() {
+func PrintHelloWorld() {
 	fmt.Println("Hello, World!")
 }

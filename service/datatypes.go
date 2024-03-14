@@ -1,11 +1,11 @@
-package main
+package service
 
 import (
 	"fmt"
 )
 
 // Basic data types in Go
-func printBasicNumbers() {
+func PrintBasicNumbers() {
 	fmt.Println("Satu = ", 1)
 	fmt.Println("Dua = ", 1)
 	fmt.Println("Tiga Koma Lima = ", 3.5)
