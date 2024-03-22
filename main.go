@@ -25,7 +25,10 @@ func main() {
 		{8, "Print Boolean Operation"},
 		{9, "Print Array Contents"},
 		{10, "Slice Data Type"},
-		{11, "Exit"},
+		{11, "Map Data Type"},
+		{12, "If Expression"},
+		{13, "Switch Expression"},
+		{14, "Exit"},
 	}
 
 	for {
@@ -69,6 +72,15 @@ func main() {
 			fmt.Println()
 		case 10:
 			service.PrintSlice()
+			fmt.Println()
+		case 11:
+			service.PrintMap()
+			fmt.Println()
+		case 12:
+			service.PrintIf()
+			fmt.Println()
+		case 13:
+			service.PrintSwitch()
 			fmt.Println()
 		}
 
