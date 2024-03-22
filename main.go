@@ -6,8 +6,8 @@ import (
 )
 
 type MenuItem struct {
-	idx  int    `int`
-	menu string `string`
+	idx  int
+	menu string
 }
 
 // Basic Output to Console & Code Compilation using "go build" command
@@ -21,7 +21,11 @@ func main() {
 		{4, "Convert Data Type"},
 		{5, "Type Declaration"},
 		{6, "Print Addition"},
-		{7, "Exit"},
+		{7, "Print Operator Comparison"},
+		{8, "Print Boolean Operation"},
+		{9, "Print Array Contents"},
+		{10, "Slice Data Type"},
+		{11, "Exit"},
 	}
 
 	for {
@@ -53,6 +57,18 @@ func main() {
 			fmt.Println()
 		case 6:
 			service.PrintOperation()
+			fmt.Println()
+		case 7:
+			service.PrintOperatorComparison()
+			fmt.Println()
+		case 8:
+			service.PrintBooleanOperation()
+			fmt.Println()
+		case 9:
+			service.PrintArray()
+			fmt.Println()
+		case 10:
+			service.PrintSlice()
 			fmt.Println()
 		}
 
