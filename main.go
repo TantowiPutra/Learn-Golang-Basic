@@ -28,7 +28,12 @@ func main() {
 		{11, "Map Data Type"},
 		{12, "If Expression"},
 		{13, "Switch Expression"},
-		{14, "Exit"},
+		{14, "For Loop"},
+		{15, "Function Parameter"},
+		{16, "Function Return Value"},
+		{17, "Function Return Multiple Value"},
+		{18, "Function Named Return Value"},
+		{19, "Exit"},
 	}
 
 	for {
@@ -82,6 +87,38 @@ func main() {
 		case 13:
 			service.PrintSwitch()
 			fmt.Println()
+		case 14:
+			service.PrintForLoop()
+			fmt.Println()
+		case 15:
+			service.SayHelloTo("Tantowi", "123")
+			fmt.Println()
+		case 16:
+			fmt.Println(service.PrintFunctionReturnValue("Tantowi"))
+			fmt.Println()
+		case 17:
+			firstString, firstSlice, firstMap := service.PrintFunctionReturnMultipleValue()
+			fmt.Println(firstString)
+
+			for _, item := range firstSlice {
+				fmt.Println(item)
+			}
+
+			for _, item := range firstMap {
+				fmt.Println(item)
+			}
+		case 18:
+			// Function Named Return Value digunakan untuk meningkatkan readability function
+			firstString, firstSlice, firstMap := service.PrintFunctionNamedReturnValue()
+			fmt.Println(firstString)
+
+			for _, item := range firstSlice {
+				fmt.Println(item)
+			}
+
+			for _, item := range firstMap {
+				fmt.Println(item)
+			}
 		}
 
 		if option == len(menuList) {
