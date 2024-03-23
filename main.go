@@ -33,7 +33,9 @@ func main() {
 		{16, "Function Return Value"},
 		{17, "Function Return Multiple Value"},
 		{18, "Function Named Return Value"},
-		{19, "Exit"},
+		{19, "Variadic Function (Varargs)"},
+		{20, "Function as Value"},
+		{21, "Exit"},
 	}
 
 	for {
@@ -119,6 +121,22 @@ func main() {
 			for _, item := range firstMap {
 				fmt.Println(item)
 			}
+
+			fmt.Println()
+		case 19:
+			response := service.SumAll("Apple", 1, 2, 3, 4, 5, 6, 7)
+			fmt.Println(response)
+			fmt.Println()
+
+			// Or We Could Pass Slice To A Variadic Function using the notation (...) to indicate that, the slice should be treated
+			// Individially instead as a group (slice)
+
+			numberSlice := []int{1, 3, 5}
+			fmt.Println(service.SumAll("Melons", numberSlice...))
+			fmt.Println()
+		case 20:
+			service.PrintFunctionAsValue()
+			fmt.Println()
 		}
 
 		if option == len(menuList) {
