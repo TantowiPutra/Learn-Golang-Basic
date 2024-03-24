@@ -5,6 +5,8 @@ import (
 	"idx/service"
 )
 
+type Blacklist func(string) bool
+
 type MenuItem struct {
 	idx  int
 	menu string
@@ -36,7 +38,9 @@ func main() {
 		{19, "Variadic Function (Varargs)"},
 		{20, "Function as Value"},
 		{21, "Function as Parameter"},
-		{22, "Exit"},
+		{22, "Anonymous Function"},
+		{23, "Recursive Function"},
+		{24, "Exit"},
 	}
 
 	for {
@@ -141,6 +145,17 @@ func main() {
 		case 21:
 			service.SayHelloWithFilter("Anjing", service.SpamFilter, service.UpperFilter)
 			service.SayHelloWithFilter("test nama", service.SpamFilter, service.UpperFilter)
+		case 22:
+			blacklist := func(name string) bool {
+				return name == "anjing"
+			}
+
+			service.RegisterUser("anjing", blacklist)
+			service.RegisterUser("test nama", blacklist)
+			fmt.Println()
+		case 23:
+			service.PrintRecursiveNumbers(120)
+			fmt.Println()
 		}
 
 		if option == len(menuList) {
