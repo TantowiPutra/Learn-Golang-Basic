@@ -13,6 +13,5 @@ func PrintForLoop() {
 	// for dengan dua statement
 	for counter := 1; counter <= 10; counter++ {
 		fmt.Println("For dengan dua Statement Perulangan Ke ", counter)
-		break
 	}
 }

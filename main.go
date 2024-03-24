@@ -35,7 +35,8 @@ func main() {
 		{18, "Function Named Return Value"},
 		{19, "Variadic Function (Varargs)"},
 		{20, "Function as Value"},
-		{21, "Exit"},
+		{21, "Function as Parameter"},
+		{22, "Exit"},
 	}
 
 	for {
@@ -137,6 +138,9 @@ func main() {
 		case 20:
 			service.PrintFunctionAsValue()
 			fmt.Println()
+		case 21:
+			service.SayHelloWithFilter("Anjing", service.SpamFilter, service.UpperFilter)
+			service.SayHelloWithFilter("test nama", service.SpamFilter, service.UpperFilter)
 		}
 
 		if option == len(menuList) {
