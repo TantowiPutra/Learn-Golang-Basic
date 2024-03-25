@@ -40,7 +40,8 @@ func main() {
 		{21, "Function as Parameter"},
 		{22, "Anonymous Function"},
 		{23, "Recursive Function"},
-		{24, "Exit"},
+		{24, "Closure"},
+		{25, "Exit"},
 	}
 
 	for {
@@ -155,6 +156,9 @@ func main() {
 			fmt.Println()
 		case 23:
 			service.PrintRecursiveNumbers(120)
+			fmt.Println()
+		case 24:
+			service.PrintClosure()
 			fmt.Println()
 		}
 
