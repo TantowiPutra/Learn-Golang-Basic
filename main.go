@@ -41,7 +41,8 @@ func main() {
 		{22, "Anonymous Function"},
 		{23, "Recursive Function"},
 		{24, "Closure"},
-		{25, "Exit"},
+		{25, "Defer, Panic, and Recover"},
+		{26, "Exit"},
 	}
 
 	for {
@@ -159,6 +160,20 @@ func main() {
 			fmt.Println()
 		case 24:
 			service.PrintClosure()
+			fmt.Println()
+		case 25:
+			// 1. Defer
+			// Simulasi Error, pembagian angka dengan, karena error maka masuk state panic
+			// service.RunApplication(0)
+
+			// 2. Panic
+			// Simulasi Error Panic
+			// service.RunApp(true)
+
+			// 3. Recover
+			// Simulasi Recover dari Error menggunakan fungsi panic()
+			service.RunApp2(true)
+
 			fmt.Println()
 		}
 
