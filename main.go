@@ -42,7 +42,8 @@ func main() {
 		{23, "Recursive Function"},
 		{24, "Closure"},
 		{25, "Defer, Panic, and Recover"},
-		{26, "Exit"},
+		{26, "Struct"},
+		{27, "Exit"},
 	}
 
 	for {
@@ -174,6 +175,10 @@ func main() {
 			// Simulasi Recover dari Error menggunakan fungsi panic()
 			service.RunApp2(true)
 
+			fmt.Println()
+		case 26:
+			// Struct
+			service.PrintStruct()
 			fmt.Println()
 		}
 
