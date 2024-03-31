@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"idx/service"
+	"strconv"
 )
 
 type Blacklist func(string) bool
@@ -45,7 +46,9 @@ func main() {
 		{26, "Struct"},
 		{27, "Struct Function"},
 		{28, "Interface"},
-		{29, "Exit"},
+		{29, "Nil"},
+		{30, "Test Code"},
+		{31, "Exit"},
 	}
 
 	for {
@@ -190,7 +193,38 @@ func main() {
 			// Interface
 			person := service.Person{Name: "Tantowi"}
 			service.SayHello2(person)
-			service.PrintSample(person)
+			fmt.Println(service.PrintSample(person))
+			fmt.Println()
+		case 29:
+			mapNil := service.NewMap("")
+			mapVal := service.NewMap("Tantowi")
+
+			fmt.Println(mapNil)
+
+			if mapNil == nil {
+				fmt.Println("Data Kosong")
+			}
+
+			fmt.Println(mapVal)
+			fmt.Println()
+		case 30:
+			number := 1
+			numberString := "1"
+			parsedVal, err := strconv.Atoi(numberString)
+
+			parsedStringVal := strconv.Itoa(parsedVal)
+
+			if err == nil {
+				if number == parsedVal {
+					fmt.Println("Sama")
+				} else {
+					fmt.Println(number, numberString)
+				}
+			} else {
+				fmt.Println("Error", err)
+			}
+
+			fmt.Println(parsedStringVal)
 			fmt.Println()
 		}
 

@@ -6,6 +6,10 @@ type HasName interface {
 	GetName() string
 }
 
+type Example interface {
+	name() string
+}
+
 type HasFunction interface {
 	Sample1() string
 	Sample2() string
@@ -20,8 +24,10 @@ func SayHello2(hasName HasName) {
 	fmt.Println("Hello", hasName.GetName())
 }
 
-func PrintSample(hasFunction HasFunction) {
+func PrintSample(hasFunction HasFunction) HasFunction {
 	fmt.Println(hasFunction.Sample1(), hasFunction.Sample2(), hasFunction.Sample3())
+
+	return hasFunction
 }
 
 func (person Person) GetName() string {
