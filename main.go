@@ -43,7 +43,9 @@ func main() {
 		{24, "Closure"},
 		{25, "Defer, Panic, and Recover"},
 		{26, "Struct"},
-		{27, "Exit"},
+		{27, "Struct Function"},
+		{28, "Interface"},
+		{29, "Exit"},
 	}
 
 	for {
@@ -179,6 +181,16 @@ func main() {
 		case 26:
 			// Struct
 			service.PrintStruct()
+			fmt.Println()
+		case 27:
+			// Struct Method
+			service.PrintStructMethod()
+			fmt.Println()
+		case 28:
+			// Interface
+			person := service.Person{Name: "Tantowi"}
+			service.SayHello2(person)
+			service.PrintSample(person)
 			fmt.Println()
 		}
 
