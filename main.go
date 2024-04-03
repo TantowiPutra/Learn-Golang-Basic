@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"idx/service"
 	"strconv"
@@ -48,7 +49,8 @@ func main() {
 		{28, "Interface"},
 		{29, "Nil"},
 		{30, "Test Code"},
-		{31, "Exit"},
+		{31, "Error Interface"},
+		{32, "Exit"},
 	}
 
 	for {
@@ -226,6 +228,13 @@ func main() {
 
 			fmt.Println(parsedStringVal)
 			fmt.Println()
+		case 31:
+			res, err := service.Division(1, 0)
+			fmt.Println(res, err)
+
+			// Contoh Error
+			exampleError := errors.New("Ups Error")
+			fmt.Println(exampleError)
 		}
 
 		if option == len(menuList) {
