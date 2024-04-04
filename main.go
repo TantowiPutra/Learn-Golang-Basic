@@ -50,7 +50,8 @@ func main() {
 		{29, "Nil"},
 		{30, "Test Code"},
 		{31, "Error Interface"},
-		{32, "Exit"},
+		{32, "Pointer"},
+		{33, "Exit"},
 	}
 
 	for {
@@ -233,8 +234,12 @@ func main() {
 			fmt.Println(res, err)
 
 			// Contoh Error
-			exampleError := errors.New("Ups Error")
+			exampleError := errors.New("ups error")
 			fmt.Println(exampleError)
+			fmt.Println()
+		case 32:
+			service.PrintPointer()
+			fmt.Println()
 		}
 
 		if option == len(menuList) {

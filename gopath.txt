@@ -1,0 +1,2 @@
+Go Path is Environment Variable that we use to store project and GO Libraries
+It must be created when we're creating application with > 1 file, and has the need to utilize external libraries
